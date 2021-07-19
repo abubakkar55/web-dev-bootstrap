@@ -1,6 +1,171 @@
-*,::before,::after{
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+p{
+    font-size: .9rem;
+    color: #606060;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+h2.heading-sm, .service .skills__item h3{
+    text-transform: uppercase;
+    font-size: .9rem;
+    line-height: 1.1;
+    font-weight: bold;
+    word-spacing: 3px;
+    margin: 20px 0 15px;
+}
+
+/* section-heading */
+.section-heading{
+    position: relative;
+    margin-bottom: 60px;
+    font-size: 33px;
+    text-transform: uppercase;
+}
+.section-heading::before{
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 120px;
+    height: 3px;
+    border-radius: 50px;
+    background-color: #16c9f6;
+}
+
+/* header */
+.header {
+    font-weight: 600;
+    background-image: linear-gradient(rgba(0, 168, 255, 0.3), rgba(0, 168, 255, 0.3)), url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 73%, 47% 100%, 0 75%, 0% 30%);
+    position: relative;
+    z-index: 9999;
+}
+
+.header::before,
+.navbar::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-image: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.header .navbar{
+    z-index: 9999999;
+}
+
+.header .navbar::before {
+    opacity: 0.4;
+}
+
+.header .navbar .nav-item a {
+    color: #fff;
+    position: relative;
+    margin-right: 20px;
+}
+
+.header .nav-item a::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 50px;
+    background-color: #fff;
+    transition: 0.5s width ease-in-out;
+}
+
+.header .nav-item a:hover::before {
+    width: 100%;
+}
+
+.header .hero {
+    height: inherit;
+}
+
+.header .hero h1.heading,
+.text {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.568);
+}
+
+.header .hero p.text {
+    font-size: 19px;
+    margin: 20px 0;
+color: #fff;
+}
+
+.header .hero a.btn {
+    padding: 12px 35px;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 100px;
+    margin: 0 10px;
+}
+
+.header .hero a.btn:hover {
+    background-color: #fff;
+    color: #50d1c0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ------------------ facilities Start ------------------ */
+.facilities{
+margin: 100px 0;
+}
+ .facilities__item{
+text-align: center;
+    padding: 50px;
+background-color: #fff;
+border-radius: 3px;
+transition: 0.3s ease-in-out;
+}
+.facilities__item:hover{
+    box-shadow: 0 0 10px  rgba(0, 0, 0, 0.3);
+    transform: translateY(-20px);
+}
+.facilities__item a{
+    font-size: 30px;
+}
+/* ------------------ facilities End ------------------ */
+
+/* ------------------ Service Start ------------------ */
+
+.service{
+    background-color: #f7f7f9;
+    padding: 30px 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.service  .service__items  a.icons{
+color: #16c9f6 !important;
+}
+
+.progress{
+    height: .6rem;
+    margin-bottom: 25px;
+}
+/* ------------------ Service End ------------------ */
